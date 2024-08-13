@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# :scissors:FSW-BARBER
+Program similar to ifood aimed at the barbershop market
 
-## Getting Started
+## :construction_worker: Structural step :construction_worker:
 
-First, run the development server:
+#### :racehorse: Features (Estudar sobre usabilidades necessárias de usuário e de sistema)
+* See the barbers shop
+* Access the barbers to see details
+* scheduling a especific service of the barber shop
+* Cancel scheduling
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+#### :file_folder: Relational diagram
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<table border="0">
+ <tr>
+    <td><b style="font-size:20px">User</b></td>
+    <td><b style="font-size:20px">Barbershop</b></td>
+    <td><b style="font-size:20px">Service</b></td>
+    <td><b style="font-size:20px">Booking</b></td>
+ </tr>
+ <tr>
+    <td style="font-size:12px">ID (PK)</td>
+    <td style="font-size:12px">ID (PK)</td>
+    <td style="font-size:12px">ID (PK)</td>
+    <td style="font-size:12px">ID (PK)</td>
+ </tr>
+ <tr>
+    <td style="font-size:12px">Name</td>
+    <td style="font-size:12px">Name</td>
+    <td style="font-size:12px">Barbershop ID (FK)</td>
+    <td style="font-size:12px">Service ID (FK)</td>
+ </tr>
+ <tr>
+    <td style="font-size:12px">Email</td>
+    <td style="font-size:12px">Description</td>
+    <td style="font-size:12px">Name</td>
+    <td style="font-size:12px">User ID (FK)</td>
+ </tr>
+ <tr>
+    <td style="font-size:12px"></td>
+    <td style="font-size:12px">Address</td>
+    <td style="font-size:12px">Description</td>
+    <td style="font-size:12px">Date</td>
+ </tr>
+ <tr>
+    <td style="font-size:12px"></td>
+    <td style="font-size:12px">Image URL</td>
+    <td style="font-size:12px">Image URL</td>
+    <td style="font-size:12px"></td>
+ </tr>
+ <tr>
+    <td style="font-size:12px"></td>
+    <td style="font-size:12px">Phones</td>
+    <td style="font-size:12px">Price</td>
+    <td style="font-size:12px"></td>
+ </tr>
+</table>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+#### :globe_with_meridians: Database host location 
+* [Neon.tech](http://neon.tech)
+#### :umbrella: ORM
+* Prisma
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+#### :briefcase: For commits in github
+* using Conventional commits
 
-## Learn More
+## :computer: Programming step :computer:
 
-To learn more about Next.js, take a look at the following resources:
+#### :warning: tips
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* Format the schema.prisma file : <span style="color:#B0B0B0">npx prisma format</span>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+#### :sunny: Initial commands
 
-## Deploy on Vercel
+1.  Creating a new app                   : <span style="color:#B0B0B0">npx  create-next-app@latest fsw-barber</span>
+2.  Downloading prisma                   : <span style="color:#B0B0B0"> npm install prisma --save-dev</span>
+3.  initializing prisma using postgresql : <span style="color:#B0B0B0"> npx prisma init --datasource-provider postgresql</span>
+4.  edit database_url in .env file, in this project i am using neon.tech  
+5. ignore in gitignore .env file
+6. Create the models of schema.prisma based on the relational diagram and make connections
+7. make the first migration: <span style="color:#B0B0B0"> npx prisma migrate dev --name init_db</span>
+8. Firs commit using conventional commit "chore: add prisma setup"
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#### :no_entry: Important steps to start a project after downloading it from GitHub for the first time
+* git clone *******
+* npm install
+* edit .env
+  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+
+
