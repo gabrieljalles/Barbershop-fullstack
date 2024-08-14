@@ -123,6 +123,12 @@ Program similar to ifood aimed at the barbershop market
 7. Finally, search for "Format on Save" and verify if the box is selected
 8. For more information, [visit here](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)
 
+#### :ledger: *A library that facilitates the creation of components.*
+  The [**shadcn/ui**](https://ui.shadcn.com/docs/installation/next) library offers a collection of ready-to-use React components, helpful for accelerating interface development.
+  1. install the library :  <span style="color:#FC6A53">`npx shadcn-ui@latest init`</span>
+  2. if you want to install a editable component, just consult the documentation
+
+
 #### :no_entry: *Important steps to start a project after downloading it from GitHub for the first time*
 
 - git clone ****
@@ -135,5 +141,6 @@ Program similar to ifood aimed at the barbershop market
 
 <p style="font-size:12px"> Tudo que você coloca no layout vai para todas as páginas da aplicação.</p>
 <p style="font-size:12px"> Toda pasta criada dentro de App, vira uma rota na aplicação.</p>
+<p style="font-size:12px"> Para ignorar uma pasta criada para que o sistema de rotas do next, não pegue ela, use _tanana.</p>
 <p style="font-size:12px"> Quando você cria um file com o nome de page.tsx, o next entende como uma página e se ela está na raíz, dentro do app, junto ao Layout, ele vira a página inicial (desde que só tenha uma)</p>
 <p style="font-size:12px"> Por padrão, todo arquivo do next é um SERVER COMPONENT, ou seja, não aceita interatividade com o usuário. Para uma interatividade, você precisa de javascript, manipulação de Dom. Nesse caso, você precisará adicionar "use client" no início do file. Dessa forma, ele ainda é parcialmente renderizado no lado do servidor.</p>
