@@ -66,25 +66,36 @@ Program similar to ifood aimed at the barbershop market
 
 ## :computer: Programming step :computer:
 
-#### :warning: tips
+#### :warning: *tips*
 
 * Format the schema.prisma file : <span style="color:#B0B0B0">npx prisma format</span>
 
-#### :sunny: Initial commands
+#### :sunny: *Initial commands*
 
 1.  Creating a new app                   : <span style="color:#B0B0B0">npx  create-next-app@latest fsw-barber</span>
 2.  Downloading prisma                   : <span style="color:#B0B0B0"> npm install prisma --save-dev</span>
 3.  initializing prisma using postgresql : <span style="color:#B0B0B0"> npx prisma init --datasource-provider postgresql</span>
 4.  edit database_url in .env file, in this project i am using neon.tech  
-5. ignore in gitignore .env file
-6. Create the models of schema.prisma based on the relational diagram and make connections
-7. make the first migration: <span style="color:#B0B0B0"> npx prisma migrate dev --name init_db</span>
-8. Firs commit using conventional commit "chore: add prisma setup"
+5.  ignore in gitignore .env file
+6.  Create the models of schema.prisma based on the relational diagram and make connections
+7.  make the first migration: <span style="color:#B0B0B0"> npx prisma migrate dev --name init_db</span>
+8.  git add .
+9.  git commit -m "chore: add prisma setup"
 
-#### :no_entry: Important steps to start a project after downloading it from GitHub for the first time
+#### :new_moon: *How to populate your database with mock data:*
+1. Add a seed.ts file to the Prisma folder to populate the database; this will make coding easier.
+2. Inside of package.json, below the script, insert this command
+   1. "prisma": {"seed": "ts-node prisma/seed.ts"}
+3. Before running the previous script, you need to install 'ts-node': <span style="color:#B0B0B0"> npm install -D ts-node</span>
+4. Finally, populate the database: <span style="color:#B0B0B0">npx prisma db seed</span>
+5. do the commit: git commit -m "chore: seeding the database" 
+
+#### :no_entry: *Important steps to start a project after downloading it from GitHub for the first time*
 * git clone *******
 * npm install
 * edit .env
+
+
   
 
 
