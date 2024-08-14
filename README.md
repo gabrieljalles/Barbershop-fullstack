@@ -128,7 +128,6 @@ Program similar to ifood aimed at the barbershop market
   1. install the library :  <span style="color:#FC6A53">`npx shadcn-ui@latest init`</span>
   2. if you want to install a editable component, just consult the documentation
 
-
 #### :no_entry: *Important steps to start a project after downloading it from GitHub for the first time*
 
 - git clone ****
@@ -144,3 +143,6 @@ Program similar to ifood aimed at the barbershop market
 <p style="font-size:12px"> Para ignorar uma pasta criada para que o sistema de rotas do next, não pegue ela, use _tanana.</p>
 <p style="font-size:12px"> Quando você cria um file com o nome de page.tsx, o next entende como uma página e se ela está na raíz, dentro do app, junto ao Layout, ele vira a página inicial (desde que só tenha uma)</p>
 <p style="font-size:12px"> Por padrão, todo arquivo do next é um SERVER COMPONENT, ou seja, não aceita interatividade com o usuário. Para uma interatividade, você precisa de javascript, manipulação de Dom. Nesse caso, você precisará adicionar "use client" no início do file. Dessa forma, ele ainda é parcialmente renderizado no lado do servidor.</p>
+<p style="font-size:12px">O globals.css é criado para armazenar as cores que serão usadas no projeto</p>
+<p style="font-size:12px">Quando você está programando com outras pessoas, é importante formatar o código antes de enviar para o git e vamos dizer que essa pessoa não use as bibliotecas ou extensões mencionadas, ao usar o husky (npm install -husky lint-staged), execute o código com (npx husky init), ele cria para você uma pasta com o nome de husky e dentro dela, há um arquivo chamado pre-commit, ele executa comandos antes de efetuar um commit e o commit só é completado se esses comandos forem executados com sucesso. Dentro do pré-commit, digite npx lint-staged </p>
+<p style="font-size:12px">Agora, você precisa criar um arquivo com o nome de .lintstagedrc.json e dentro dele colocar esse script {"*.ts?(x)": ["eslint --fix", "prettier --write"]},isso serve para que eslint apenas execute em arquivos específicos, no caso, arquivos que terminam em .ts e tsx</p>
