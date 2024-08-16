@@ -58,6 +58,10 @@ Program similar to ifood aimed at the barbershop market
  </tr>
 </table>
 
+#### :eyes: Figma project
+
+* [Visit Ui design](https://www.figma.com/design/HykQMt0ZNdfCKhVCTYpxf9/FSW-5.0-%5BLive%5D-(Copy)?node-id=0-1&t=m1fSzQCDszvpNm3W-0)
+
 #### :globe_with_meridians: Database host location
 
 - [Neon.tech](http://neon.tech)
@@ -74,25 +78,34 @@ Program similar to ifood aimed at the barbershop market
 
 - using Conventional commits
 
+___
 ## :computer: Programming step :computer:
 
-#### :art: _Summary color_
+#### :no_entry: *Important steps to start a project after downloading it from GitHub for the first time*
+
+- git clone ****
+- npm install
+- edit .env
+
+#### :art: Summary color
 
 - <span style="color:#FC6A53">#FC6A53 Terminal execution</span>
-- <span style="color:#5396FC">`#5396FC Default code inside a file`</span>
+- <span style="color:#5396FC">#5396FC Default code inside a file</span>
 - <span style="color:#FCCE53">#FCCE53 Git codes</span>
 - <span style="color:#74FA5F">#74FA5F New files</span>
 
-#### :flashlight: _Extensions_
+#### :flashlight: Extensions
 
 - Tailwind css
+- Prettier - Code formatter
+- Simple React Snippets
 
-#### :warning: _tips_
+#### :warning: tips
 
 - Format the schema.prisma file : <span style="color:#FC6A53">npx prisma format</span>
 - Run the application : <span style="color:#FC6A53">npm run dev</span>
 
-#### :sunny: _Initial commands_
+#### :sunny: Initial commands
 
 1.  Creating a new app : <span style="color:#FC6A53">npx create-next-app@latest fsw-barber</span>
 2.  Downloading prisma : <span style="color:#FC6A53"> npm install prisma --save-dev</span>
@@ -128,16 +141,14 @@ Program similar to ifood aimed at the barbershop market
   1. install the library :  <span style="color:#FC6A53">`npx shadcn-ui@latest init`</span>
   2. if you want to install a editable component, just consult the documentation
 
-#### :no_entry: *Important steps to start a project after downloading it from GitHub for the first time*
-
-- git clone ****
-- npm install
-- edit .env
-
 ---
 
 ## :books: Learnings :books:
 
+#### Simple React Snippets
+* SFC - 
+
+#### Concepts
 <p style="font-size:12px"> Tudo que você coloca no layout vai para todas as páginas da aplicação.</p>
 <p style="font-size:12px"> Toda pasta criada dentro de App, vira uma rota na aplicação.</p>
 <p style="font-size:12px"> Para ignorar uma pasta criada para que o sistema de rotas do next, não pegue ela, use _tanana.</p>
@@ -146,3 +157,4 @@ Program similar to ifood aimed at the barbershop market
 <p style="font-size:12px">O globals.css é criado para armazenar as cores que serão usadas no projeto</p>
 <p style="font-size:12px">Quando você está programando com outras pessoas, é importante formatar o código antes de enviar para o git e vamos dizer que essa pessoa não use as bibliotecas ou extensões mencionadas, ao usar o husky (npm install -husky lint-staged), execute o código com (npx husky init), ele cria para você uma pasta com o nome de husky e dentro dela, há um arquivo chamado pre-commit, ele executa comandos antes de efetuar um commit e o commit só é completado se esses comandos forem executados com sucesso. Dentro do pré-commit, digite npx lint-staged </p>
 <p style="font-size:12px">Agora, você precisa criar um arquivo com o nome de .lintstagedrc.json e dentro dele colocar esse script {"*.ts?(x)": ["eslint --fix", "prettier --write"]},isso serve para que eslint apenas execute em arquivos específicos, no caso, arquivos que terminam em .ts e tsx</p>
+<p style="font-size:12px">A pasta public é destinada para salvar arquivos estáticos, como logos,fonts,fotos... por exemplo</p>
