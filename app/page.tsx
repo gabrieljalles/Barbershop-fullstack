@@ -1,19 +1,26 @@
 "use client"
 
-import { useState } from "react"
+import { db } from "@/lib/prisma"
+
+import Header from "@/components/Header"
+import BarbershopItem from "@/components/BarbershopItem"
+
 import { Button } from "../components/ui/button"
 import { Input } from "../components/ui/input"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import Header from "@/components/header"
-import { Search } from "lucide-react"
-import Image from "next/image"
-import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Card, CardContent } from "@/components/ui/card"
+import Image from "next/image"
+
+import { Search } from "lucide-react"
 
 // SERVER COMPONENTS
 
-const Home = () => {
-  const [] = useState()
+const Home = async () => {
+  //calling the barbershop´s sheet of database
+  const barbershops = await db.barbershop.findMany({})
+  console.log({ barbershops })
+
   return (
     <div>
       <Header />
@@ -40,7 +47,10 @@ const Home = () => {
         </div>
 
         {/*AGENDAMENTO CLIENTE*/}
-        <Card className="mt-6">
+        <h2 className="mb-3 mt-6 text-xs font-bold uppercase text-gray-400">
+          Agendamentos
+        </h2>
+        <Card>
           <CardContent className="flex justify-between p-0">
             {/*Left*/}
             <div className="flex flex-col gap-2 p-5">
@@ -65,7 +75,13 @@ const Home = () => {
           </CardContent>
         </Card>
 
-        {/**/}
+        {/*RECOMENDAÇÕES*/}
+        <h2 className="mb-3 mt-6 text-xs font-bold uppercase text-gray-400">
+          Recomendados
+        </h2>
+        {barbershops.map((barbershop) => (
+          <BarbershopItem key={barbershop.id} barbershop={barbershop} />
+        ))}
       </div>
     </div>
   )

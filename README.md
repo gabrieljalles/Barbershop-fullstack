@@ -81,26 +81,29 @@ Program similar to ifood aimed at the barbershop market
 ___
 ## :computer: Programming step :computer:
 
-#### :no_entry: *Important steps to start a project after downloading it from GitHub for the first time*
-
-- git clone ****
-- npm install
-- edit .env
-
-#### :art: Summary color
+##### :art: Summary color
 
 - <span style="color:#FC6A53">#FC6A53 Terminal execution</span>
 - <span style="color:#5396FC">#5396FC Default code inside a file</span>
 - <span style="color:#FCCE53">#FCCE53 Git codes</span>
 - <span style="color:#74FA5F">#74FA5F New files</span>
 
-#### :flashlight: Extensions
+##### :no_entry: *Important steps to start a project after downloading it from GitHub for the first time only*
+
+- `git clone ****`
+- npm install
+- edit .env
+
+##### :warning: *If it's necessary to update the data, provided you already have the project, use the command below. Make sure to push your updates before pulling the new ones.*
+* <span style="color:#FCCE53">`git pull origin main`</span>
+
+##### :flashlight: Extensions
 
 - Tailwind css
 - Prettier - Code formatter
 - Simple React Snippets
 
-#### :warning: tips
+##### :grey_question: tips
 
 - Format the schema.prisma file : <span style="color:#FC6A53">npx prisma format</span>
 - Run the application : <span style="color:#FC6A53">npm run dev</span>
@@ -141,20 +144,49 @@ ___
   1. install the library :  <span style="color:#FC6A53">`npx shadcn-ui@latest init`</span>
   2. if you want to install a editable component, just consult the documentation
 
+##### :: * How to avoid making too many database connections every time the application is re-rendered
+
+* lib/prisma.ts 
+
 ---
 
 ## :books: Learnings :books:
 
 #### Simple React Snippets
-* SFC - 
+<p style="font-size:12px">SFC - Cria um component básico</p>
 
 #### Concepts
-<p style="font-size:12px"> Tudo que você coloca no layout vai para todas as páginas da aplicação.</p>
+
+##### Next
+
+<p style="font-size:12px"> Apenas server components podem ser assincronos.</p>
+
+<p style="font-size:12px"> Por padrão, todo arquivo do next é um SERVER COMPONENT, ou seja, não aceita interatividade com o usuário. Para uma interatividade, você precisa de javascript, manipulação de Dom. Nesse caso, você precisará adicionar "use client" no início do file. Dessa forma, ele ainda é parcialmente renderizado no lado do servidor.</p>
+
+##### Library Husky
+
+<p style="font-size:12px">Quando você está programando com outras pessoas, é importante formatar o código antes de enviar para o git e vamos dizer que essa pessoa não use as bibliotecas ou extensões mencionadas, ao usar o husky (npm install -husky lint-staged), execute o código com (npx husky init), ele cria para você uma pasta com o nome de husky e dentro dela, há um arquivo chamado pre-commit, ele executa comandos antes de efetuar um commit e o commit só é completado se esses comandos forem executados com sucesso. Dentro do pré-commit, digite npx lint-staged </p>
+<p style="font-size:12px">Agora, você precisa criar um arquivo com o nome de .lintstagedrc.json e dentro dele colocar esse script {"*.ts?(x)": ["eslint --fix", "prettier --write"]},isso serve para que eslint apenas execute em arquivos específicos, no caso, arquivos que terminam em .ts e tsx</p>
+
+##### App
 <p style="font-size:12px"> Toda pasta criada dentro de App, vira uma rota na aplicação.</p>
 <p style="font-size:12px"> Para ignorar uma pasta criada para que o sistema de rotas do next, não pegue ela, use _tanana.</p>
 <p style="font-size:12px"> Quando você cria um file com o nome de page.tsx, o next entende como uma página e se ela está na raíz, dentro do app, junto ao Layout, ele vira a página inicial (desde que só tenha uma)</p>
-<p style="font-size:12px"> Por padrão, todo arquivo do next é um SERVER COMPONENT, ou seja, não aceita interatividade com o usuário. Para uma interatividade, você precisa de javascript, manipulação de Dom. Nesse caso, você precisará adicionar "use client" no início do file. Dessa forma, ele ainda é parcialmente renderizado no lado do servidor.</p>
+
+##### App/global.css
 <p style="font-size:12px">O globals.css é criado para armazenar as cores que serão usadas no projeto</p>
-<p style="font-size:12px">Quando você está programando com outras pessoas, é importante formatar o código antes de enviar para o git e vamos dizer que essa pessoa não use as bibliotecas ou extensões mencionadas, ao usar o husky (npm install -husky lint-staged), execute o código com (npx husky init), ele cria para você uma pasta com o nome de husky e dentro dela, há um arquivo chamado pre-commit, ele executa comandos antes de efetuar um commit e o commit só é completado se esses comandos forem executados com sucesso. Dentro do pré-commit, digite npx lint-staged </p>
-<p style="font-size:12px">Agora, você precisa criar um arquivo com o nome de .lintstagedrc.json e dentro dele colocar esse script {"*.ts?(x)": ["eslint --fix", "prettier --write"]},isso serve para que eslint apenas execute em arquivos específicos, no caso, arquivos que terminam em .ts e tsx</p>
+
+##### App/Layout
+<p style="font-size:12px"> Tudo que você coloca no layout vai para todas as páginas da aplicação.</p>
+
+
+##### lib/Prisma.ts
+<p style="font-size:12px">Sempre que você compila/salva sua aplicação, se não existir esse arquivo, o servidor fica abrindo novas conexões com o banco de dados. Esse comando impede que isso aconteça. Se já existe uma, ele apaga e começa novamente.</p>
+
+
+##### Public
+
 <p style="font-size:12px">A pasta public é destinada para salvar arquivos estáticos, como logos,fonts,fotos... por exemplo</p>
+
+
+# PAREI EM 01:11:11
