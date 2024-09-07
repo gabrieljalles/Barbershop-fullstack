@@ -107,6 +107,7 @@ ___
 
 - Format the schema.prisma file : <span style="color:#FC6A53">npx prisma format</span>
 - Run the application : <span style="color:#FC6A53">npm run dev</span>
+- Open the database with prisma : <span style="color:#FC6A53">npx prisma studio</span>
 
 #### :sunny: Initial commands
 
@@ -144,12 +145,20 @@ ___
   1. install the library :  <span style="color:#FC6A53">`npx shadcn-ui@latest init`</span>
   2. if you want to install a editable component, just consult the documentation
 
-##### :: * How to avoid making too many database connections every time the application is re-rendered
+##### :two_men_holding_hands: * How to avoid making too many database connections every time the application is re-rendered: *
 
-* lib/prisma.ts 
+* lib/prisma.ts | you need to get the code and paste there
 
----
-
+##### :fireworks: * Allowing images to be sent from the server to Next.js: * 
+* In the next.config.mjs file, you will need to add the following command:
+` images: {
+  remotePatterns: [
+    {
+      hostname: "utfs.io",
+    },
+  ],
+},  
+`
 ## :books: Learnings :books:
 
 #### Simple React Snippets
@@ -159,6 +168,9 @@ ___
 
 ##### Next
 
+<p style="font-size:12px"> No tópico de fireworks (how to send image from server to next...), o comando é necessário para promover otimização, segurança e controle de origem, ao colocar aquele comando, estou primitindo que imagens hospedadas no domínio específico (utfs.io) possam ser carregadas no NEXT. Ao observar no banco de dados, todas as imagens veem do site utfs.io, então, precisar adaptar ao seu projeto.
+</p>
+
 <p style="font-size:12px"> Apenas server components podem ser assincronos.</p>
 
 <p style="font-size:12px"> Por padrão, todo arquivo do next é um SERVER COMPONENT, ou seja, não aceita interatividade com o usuário. Para uma interatividade, você precisa de javascript, manipulação de Dom. Nesse caso, você precisará adicionar "use client" no início do file. Dessa forma, ele ainda é parcialmente renderizado no lado do servidor.</p>
@@ -167,6 +179,11 @@ ___
 
 <p style="font-size:12px">Quando você está programando com outras pessoas, é importante formatar o código antes de enviar para o git e vamos dizer que essa pessoa não use as bibliotecas ou extensões mencionadas, ao usar o husky (npm install -husky lint-staged), execute o código com (npx husky init), ele cria para você uma pasta com o nome de husky e dentro dela, há um arquivo chamado pre-commit, ele executa comandos antes de efetuar um commit e o commit só é completado se esses comandos forem executados com sucesso. Dentro do pré-commit, digite npx lint-staged </p>
 <p style="font-size:12px">Agora, você precisa criar um arquivo com o nome de .lintstagedrc.json e dentro dele colocar esse script {"*.ts?(x)": ["eslint --fix", "prettier --write"]},isso serve para que eslint apenas execute em arquivos específicos, no caso, arquivos que terminam em .ts e tsx</p>
+
+##### Prisma
+
+<p style="font-size:12px"> O prisma já se integra ao Typescript, o que nos permite já puxar
+a tipagem do banco de dados criado pelo schema.prisma caso seja necessário, no arquivo barbershopItem.tsx, ao realizar a tipagem com interface BarbershopItemProps{barbershop:Barbershop}, já estamos pasando todos os itens necessários para cria-la quando importamos do prisma o próprio banco de dados: import {Barbershop} from "@prisma/client"</p>
 
 ##### App
 <p style="font-size:12px"> Toda pasta criada dentro de App, vira uma rota na aplicação.</p>
@@ -189,4 +206,4 @@ ___
 <p style="font-size:12px">A pasta public é destinada para salvar arquivos estáticos, como logos,fonts,fotos... por exemplo</p>
 
 
-# PAREI EM 01:11:11
+# PAREI EM 01:25:00 | Criando a estrela
