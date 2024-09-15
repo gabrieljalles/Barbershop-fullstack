@@ -168,6 +168,9 @@ ___
 
 ##### Next
 
+<p style="font-size:12px"> Semanticamente, não é correto renderizar o "a" tag dentro de um botão. Para solucionar esse problema, no botão, use o camndo  "asChild" para transformar o próprio botão no "a" tag. Isso acontece quando colocamos uma tag "Button" e dentro dela, "Link".
+</p>
+
 <p style="font-size:12px"> No tópico de fireworks (how to send image from server to next...), o comando é necessário para promover otimização, segurança e controle de origem, ao colocar aquele comando, estou primitindo que imagens hospedadas no domínio específico (utfs.io) possam ser carregadas no NEXT. Ao observar no banco de dados, todas as imagens veem do site utfs.io, então, precisar adaptar ao seu projeto.
 </p>
 

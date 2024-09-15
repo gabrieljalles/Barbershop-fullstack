@@ -1,5 +1,3 @@
-"use client"
-
 import { db } from "@/lib/prisma"
 
 import { quickSearchOptions } from "@/constants/quickSearch"
@@ -13,6 +11,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import Image from "next/image"
 
 import BookingItem from "@/components/bookingItem"
+import { Search } from "lucide-react"
 
 // SERVER COMPONENTS
 const Home = async () => {
