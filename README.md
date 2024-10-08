@@ -171,6 +171,11 @@ ___
 <p style="font-size:12px"> Semanticamente, não é correto renderizar o "a" tag dentro de um botão. Para solucionar esse problema, no botão, use o camndo  "asChild" para transformar o próprio botão no "a" tag. Isso acontece quando colocamos uma tag "Button" e dentro dela, "Link".
 </p>
 
+<p style="font-size:12px"> Quando você adiciona onClick no arquivo, ele precisa do javascript para funcionar, o lado do cliente. Para isso, eu preciso que esse arquivo seja do tipo cliente adicionando no inicio dele "use cliente"
+O que nos dá outro problema, quando você utiliza o use client, você deixa de ter a conexão com o servidor e a
+maioria das páginas são dinâmicas, o que fazer? Nesse momento, O ideal é pegar a parte que é comunicável com o usuário
+(Clicar no botão e copiar o número de telefone da barbearia) e  criar um novo arquivo para ele. phoneItem.tsx</p>
+
 <p style="font-size:12px"> No tópico de fireworks (how to send image from server to next...), o comando é necessário para promover otimização, segurança e controle de origem, ao colocar aquele comando, estou primitindo que imagens hospedadas no domínio específico (utfs.io) possam ser carregadas no NEXT. Ao observar no banco de dados, todas as imagens veem do site utfs.io, então, precisar adaptar ao seu projeto.
 </p>
 
@@ -209,4 +214,4 @@ a tipagem do banco de dados criado pelo schema.prisma caso seja necessário, no 
 <p style="font-size:12px">A pasta public é destinada para salvar arquivos estáticos, como logos,fonts,fotos... por exemplo</p>
 
 
-# PAREI EM 01:48:00 | Componentizando agendamento bookingItem
+# PAREI EM 2 - 49:00 | Creating id page

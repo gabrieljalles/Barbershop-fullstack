@@ -10,7 +10,7 @@ import { Input } from "../components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
 import Image from "next/image"
 
-import BookingItem from "@/components/bookingItem"
+import BookingItem from "@/components/BookingItem"
 import { Search } from "lucide-react"
 
 // SERVER COMPONENTS
@@ -86,15 +86,6 @@ const Home = async () => {
           ))}
         </div>
       </div>
-      <footer>
-        <Card>
-          <CardContent className="px-4 py-6">
-            <p className="text-sm text-gray-400">
-              2024 Copyright <span className="font-bold">FSW Barber</span>
-            </p>
-          </CardContent>
-        </Card>
-      </footer>
     </div>
   )
 }
