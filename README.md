@@ -70,6 +70,10 @@ Program similar to ifood aimed at the barbershop market
 
 - Prisma
 
+#### :closed_lock_with_key: Authentication method
+
+- NextAuth.js
+
 #### :nail_care: CSS framework
 
 - Tailwind
@@ -145,7 +149,7 @@ ___
   1. install the library :  <span style="color:#FC6A53">`npx shadcn-ui@latest init`</span>
   2. if you want to install a editable component, just consult the documentation
 
-##### :two_men_holding_hands: * How to avoid making too many database connections every time the application is re-rendered: *
+#### :two_men_holding_hands:  How to avoid making too many database connections every time the application is re-rendered: 
 
 * lib/prisma.ts | you need to get the code and paste there
 
@@ -159,6 +163,17 @@ ___
   ],
 },  
 `
+#### :closed_lock_with_key: *How to install NextAuth authentication (V4)*
+
+* Install on Terminal : npm install next-auth
+* Create a folder inside /app/api/auth/[...nextauth]/route.ts and make the necessary modifications -> [Next Auth](https://next-auth.js.org/getting-started/example)
+* Since we are using Prisma, we need to connect NextAuth to Prisma in Order to enable interaction between them. [Adapters](https://next-auth.js.org/adapters)
+* Install it : npm install @auth/prisma-adapter
+* After adding the prisma adapter in route.ts, you need to update the schema.prisma by pasting the following [CODE](https://authjs.dev/getting-started/adapters/prisma?_gl=1*syh39y*_gcl_au*MTM5OTAzNjcyNC4xNzI4NDc2MDQ1). This code represents a new schema that connects with the previously created schema.
+* npx prisma format
+
+
+
 ## :books: Learnings :books:
 
 #### Simple React Snippets
