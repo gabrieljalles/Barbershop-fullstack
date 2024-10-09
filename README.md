@@ -170,7 +170,15 @@ ___
 * Since we are using Prisma, we need to connect NextAuth to Prisma in Order to enable interaction between them. [Adapters](https://next-auth.js.org/adapters)
 * Install it : npm install @auth/prisma-adapter
 * After adding the prisma adapter in route.ts, you need to update the schema.prisma by pasting the following [CODE](https://authjs.dev/getting-started/adapters/prisma?_gl=1*syh39y*_gcl_au*MTM5OTAzNjcyNC4xNzI4NDc2MDQ1). This code represents a new schema that connects with the previously created schema.
-* npx prisma format
+* to format : npx prisma format 
+* to make migration : npx prisma migrate dev --name add_auth_tables
+* to verify : npx prisma studio
+* Visit google developer console
+
+
+
+
+
 
 
 
