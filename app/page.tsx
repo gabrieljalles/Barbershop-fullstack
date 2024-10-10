@@ -10,6 +10,7 @@ import Image from "next/image"
 
 import BookingItem from "@/components/BookingItem"
 import Search from "@/components/Search"
+import Link from "next/link"
 
 // SERVER COMPONENTS
 const Home = async () => {
@@ -36,14 +37,16 @@ const Home = async () => {
         {/*FAST SEARCH*/}
         <div className="flex gap-3 overflow-x-scroll pt-6 [&::-webkit-scrollbar]:hidden">
           {quickSearchOptions.map((option) => (
-            <Button className="gap-2" variant="secondary">
-              <Image
-                src={option.imageUrl}
-                width={16}
-                height={16}
-                alt={option.alt}
-              />
-              {option.title}
+            <Button className="gap-2" variant="secondary" asChild>
+              <Link href={`/barbershops?service=${option.title}`}>
+                <Image
+                  src={option.imageUrl}
+                  width={16}
+                  height={16}
+                  alt={option.alt}
+                />
+                {option.title}
+              </Link>
             </Button>
           ))}
         </div>
