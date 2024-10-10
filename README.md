@@ -174,13 +174,7 @@ ___
 * to make migration : npx prisma migrate dev --name add_auth_tables
 * to verify : npx prisma studio
 * Visit google developer console
-
-
-
-
-
-
-
+* You need to see a video for more details
 
 ## :books: Learnings :books:
 
@@ -188,6 +182,11 @@ ___
 <p style="font-size:12px">SFC - Cria um component básico</p>
 
 #### Concepts
+
+
+##### SHADCN
+
+<p style="font-size:12px">Usar o Forms do SHADCN, evita que a página fica renderizando a todo momento que digita uma letra nova. Evita processamento sem necessidade</p>
 
 ##### Next
 
@@ -235,6 +234,3 @@ a tipagem do banco de dados criado pelo schema.prisma caso seja necessário, no 
 ##### Public
 
 <p style="font-size:12px">A pasta public é destinada para salvar arquivos estáticos, como logos,fonts,fotos... por exemplo</p>
-
-
-# PAREI EM 2 - 1:58:0 | Creating id page

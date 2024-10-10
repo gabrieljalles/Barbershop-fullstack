@@ -6,12 +6,10 @@ import Header from "@/components/Header"
 import BarbershopItem from "@/components/BarbershopItem"
 
 import { Button } from "../components/ui/button"
-import { Input } from "../components/ui/input"
-import { Card, CardContent } from "@/components/ui/card"
 import Image from "next/image"
 
 import BookingItem from "@/components/BookingItem"
-import { Search } from "lucide-react"
+import Search from "@/components/Search"
 
 // SERVER COMPONENTS
 const Home = async () => {
@@ -31,11 +29,8 @@ const Home = async () => {
         <p>Sexta, 16 de Agosto</p>
 
         {/*SEARCH*/}
-        <div className="flex flex-row items-center justify-between gap-2 pt-6">
-          <Input placeholder="Faça sua busca..." />
-          <Button size="icon" className="p-2">
-            <Search />
-          </Button>
+        <div className="mt-6">
+          <Search />
         </div>
 
         {/*FAST SEARCH*/}
