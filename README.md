@@ -234,6 +234,4 @@ a tipagem do banco de dados criado pelo schema.prisma caso seja necessário, no 
 ##### Public
 
 <p style="font-size:12px">A pasta public é destinada para salvar arquivos estáticos, como logos,fonts,fotos... por exemplo</p>
-
-
-Parei no 5 1:45                                                           
+                                                       
