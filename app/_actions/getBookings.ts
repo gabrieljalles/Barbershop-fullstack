@@ -5,11 +5,10 @@ import { endOfDay, startOfDay } from "date-fns"
 import { revalidatePath } from "next/cache"
 
 interface GetBookingsProps {
-  serviceId: string
   date: Date
 }
 
-export const GetBookings = async ({ date, serviceId }: GetBookingsProps) => {
+export const GetBookings = async ({ date }: GetBookingsProps) => {
   const booking = await db.booking.findMany({
     where: {
       date: {

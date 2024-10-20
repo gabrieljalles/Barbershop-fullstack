@@ -73,7 +73,6 @@ const ServiceItem = ({ service, barbershop }: ServiceItemProps) => {
       if (!selectedDay) return
       const bookings = await GetBookings({
         date: selectedDay,
-        serviceId: service.id,
       })
       setDayBookings(bookings)
     }

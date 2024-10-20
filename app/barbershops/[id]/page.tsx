@@ -2,12 +2,7 @@ import PhoneItem from "@/components/PhoneItem"
 import ServiceItem from "@/components/ServiceItem"
 import SidebarSheet from "@/components/SidebarSheet"
 import { Button } from "@/components/ui/button"
-import {
-  Sheet,
-  SheetClose,
-  SheetFooter,
-  SheetTrigger,
-} from "@/components/ui/sheet"
+import { Sheet, SheetTrigger } from "@/components/ui/sheet"
 import { db } from "@/lib/prisma"
 import { ChevronLeftIcon, MapPinIcon, MenuIcon, StarIcon } from "lucide-react"
 import Image from "next/image"

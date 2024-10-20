@@ -1,11 +1,9 @@
 import BookingItem from "@/components/BookingItem"
 import Header from "@/components/Header"
-import SignInDialog from "@/components/signInDialog"
 import { authOptions } from "@/lib/auth"
 import { db } from "@/lib/prisma"
 import { getServerSession } from "next-auth"
 import { notFound } from "next/navigation"
-import { useState } from "react"
 
 const Bookings = async () => {
   const session = await getServerSession(authOptions)
