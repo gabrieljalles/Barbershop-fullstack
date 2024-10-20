@@ -79,6 +79,7 @@ const Home = async () => {
                   width={16}
                   height={16}
                   alt={option.alt}
+                  key={option.title}
                 />
                 {option.title}
               </Link>

@@ -7,20 +7,12 @@ import { quickSearchOptions } from "@/constants/quickSearch"
 import { Avatar, AvatarImage } from "./ui/avatar"
 import Link from "next/link"
 import Image from "next/image"
-import {
-  Dialog,
-  DialogDescription,
-  DialogTrigger,
-  DialogHeader,
-  DialogTitle,
-  DialogContent,
-} from "./ui/dialog"
+import { Dialog, DialogTrigger, DialogContent } from "./ui/dialog"
 import { signIn, signOut, useSession } from "next-auth/react"
 import SignInDialog from "./signInDialog"
 
 const SidebarSheet = () => {
   const { data } = useSession()
-  const handleLoginWithGoogleClick = () => signIn("google")
   const handleSignOutGoogleClick = () => signOut()
 
   return (
@@ -93,6 +85,7 @@ const SidebarSheet = () => {
                   height={18}
                   width={18}
                   alt={option.alt}
+                  key={option.title}
                 />
                 {option.title}
               </Link>

@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { Card, CardContent } from "./ui/card"
-import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet"
+import { Sheet, SheetTrigger } from "./ui/sheet"
 import { MenuIcon } from "lucide-react"
 import { Button } from "./ui/button"
 import SidebarSheet from "./SidebarSheet"
