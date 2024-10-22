@@ -1,6 +1,6 @@
-import BarbershopItem from "@/components/BarbershopItem"
-import Header from "@/components/Header"
-import Search from "@/components/Search"
+import BarbershopItem from "@/app/_components/BarbershopItem"
+import Header from "@/app/_components/Header"
+import Search from "@/app/_components/Search"
 import { db } from "@/lib/prisma"
 
 interface BarbershopsPageProps {
