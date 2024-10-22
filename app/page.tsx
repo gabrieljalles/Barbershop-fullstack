@@ -2,14 +2,14 @@ import { db } from "@/lib/prisma"
 
 import { quickSearchOptions } from "@/constants/quickSearch"
 
-import Header from "@/components/Header"
-import BarbershopItem from "@/components/BarbershopItem"
+import Header from "@/app/_components/Header"
+import BarbershopItem from "@/app/_components/BarbershopItem"
 
-import { Button } from "../components/ui/button"
+import { Button } from "@/app/_components/ui/button"
 import Image from "next/image"
 
-import BookingItem from "@/components/BookingItem"
-import Search from "@/components/Search"
+import BookingItem from "@/app/_components/BookingItem"
+import Search from "@/app/_components/Search"
 import Link from "next/link"
 import { authOptions } from "@/lib/auth"
 import { getServerSession } from "next-auth"

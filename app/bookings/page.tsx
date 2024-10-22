@@ -1,5 +1,5 @@
-import BookingItem from "@/components/BookingItem"
-import Header from "@/components/Header"
+import BookingItem from "@/app/_components/BookingItem"
+import Header from "@/app/_components/Header"
 import { authOptions } from "@/lib/auth"
 import { db } from "@/lib/prisma"
 import { getServerSession } from "next-auth"
