@@ -136,7 +136,7 @@ const ServiceItem = ({ service, barbershop }: ServiceItemProps) => {
     <>
       <Card>
         <CardContent className="flex items-center gap-3 p-3">
-          <div className="flex items-center gap-3">
+          <div className="flex w-full items-center gap-3">
             {/* IMAGE */}
             <div className="relative max-h-[110px] min-h-[110px] min-w-[110px] max-w-[110px]">
               <Image
@@ -148,12 +148,12 @@ const ServiceItem = ({ service, barbershop }: ServiceItemProps) => {
             </div>
 
             {/* DIREITA */}
-            <div className="space-y-3">
+            <div className="flex-1 space-y-3">
               <h3 className="font-semibold">{service.name}</h3>
               <p className="text-sm text-gray-400">{service.description}</p>
 
               {/*Preço e botão*/}
-              <div className="item-center flex justify-between">
+              <div className="flex items-center justify-between">
                 <p className="text-sm font-bold text-primary">
                   {Intl.NumberFormat("pt-BR", {
                     style: "currency",

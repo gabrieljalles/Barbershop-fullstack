@@ -72,14 +72,18 @@ const Home = async () => {
         {/*FAST SEARCH*/}
         <div className="flex gap-3 overflow-x-scroll pt-6 [&::-webkit-scrollbar]:hidden">
           {quickSearchOptions.map((option) => (
-            <Button className="gap-2" variant="secondary" asChild>
+            <Button
+              className="gap-2"
+              variant="secondary"
+              key={option.title}
+              asChild
+            >
               <Link href={`/barbershops?service=${option.title}`}>
                 <Image
                   src={option.imageUrl}
                   width={16}
                   height={16}
                   alt={option.alt}
-                  key={option.title}
                 />
                 {option.title}
               </Link>
@@ -94,6 +98,7 @@ const Home = async () => {
             alt={"Um banner mostrando, Agende nos melhores com fsw barber"}
             fill
             className="rounded-lg object-cover"
+            key="/banner-01.svg"
           />
         </div>
 

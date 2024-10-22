@@ -8,7 +8,7 @@ import { Avatar, AvatarImage } from "./ui/avatar"
 import Link from "next/link"
 import Image from "next/image"
 import { Dialog, DialogTrigger, DialogContent } from "./ui/dialog"
-import { signIn, signOut, useSession } from "next-auth/react"
+import { signOut, useSession } from "next-auth/react"
 import SignInDialog from "./signInDialog"
 
 const SidebarSheet = () => {
@@ -72,7 +72,7 @@ const SidebarSheet = () => {
       </div>
       <div className="flex flex-col gap-1 border-b border-solid p-5 py-5">
         {quickSearchOptions.map((option) => (
-          <SheetClose asChild>
+          <SheetClose asChild key={option.title}>
             <Button
               key={option.title}
               className="justify-start gap-2"
@@ -85,7 +85,6 @@ const SidebarSheet = () => {
                   height={18}
                   width={18}
                   alt={option.alt}
-                  key={option.title}
                 />
                 {option.title}
               </Link>
