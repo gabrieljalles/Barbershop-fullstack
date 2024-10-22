@@ -234,4 +234,12 @@ a tipagem do banco de dados criado pelo schema.prisma caso seja necessário, no 
 ##### Public
 
 <p style="font-size:12px">A pasta public é destinada para salvar arquivos estáticos, como logos,fonts,fotos... por exemplo</p>
-                                                       
+
+#### :closed_lock_with_key: *How to deploy your app*
+* Fist things first, you need to create NEXT_AUTH_SECRET ="secret" inside .ENV
+* After, you need to update the code auth.ts with "secret: process.env.NEXT_AUTH_SECRET," before the last "}"
+* in Terminal, "npm run build"
+* you need to send the migrations prisma to your database production. "npx prisma migrate deploy"
+* if you have population seed, you can use: "npx prisma db seed"
+* add project in vercel and put the .env codes there.
+* if you are using google authentication, inside of: api e serviços/credenciais/ choose you app / URLs 1: change http:/localhost:3000 / to your deploy site that vercel shows you (if you are deploying in vercel);
