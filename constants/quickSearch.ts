@@ -6,32 +6,32 @@ interface QuickSearchOptionProps {
 
 export const quickSearchOptions: QuickSearchOptionProps[] = [
   {
-    imageUrl: "/cabelo.svg",
+    imageUrl: "@/app/_public/cabelo.svg",
     title: "Cabelo",
     alt: "Pesquisa rápida de cabelo",
   },
   {
-    imageUrl: "/barba.svg",
+    imageUrl: "@/app/_public/barba.svg",
     title: "Barba",
     alt: "Pesquisa rápida de barba",
   },
   {
-    imageUrl: "/acabamento.svg",
+    imageUrl: "@/app/_public/acabamento.svg",
     title: "Acabemento",
     alt: "Pesquisa rápida de acabemento",
   },
   {
-    imageUrl: "/sobrancelha.svg",
+    imageUrl: "@/app/_public/sobrancelha.svg",
     title: "Sobrancelha",
     alt: "Pesquisa rápida de sobrancelha",
   },
   {
-    imageUrl: "/massagem.svg",
+    imageUrl: "@/app/_public/massagem.svg",
     title: "Massagem",
     alt: "Pesquisa rápida de massagem",
   },
   {
-    imageUrl: "/hidratacao.svg",
+    imageUrl: "@/app/_public/hidratacao.svg",
     title: "Hidratação",
     alt: "Pesquisa rápida do hidratacao",
   },
