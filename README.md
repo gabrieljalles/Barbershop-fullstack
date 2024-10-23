@@ -243,3 +243,5 @@ a tipagem do banco de dados criado pelo schema.prisma caso seja necessário, no 
 * if you have population seed, you can use: "npx prisma db seed"
 * add project in vercel and put the .env codes there.
 * if you are using google authentication, inside of: api e serviços/credenciais/ choose you app / URLs 1: change http:/localhost:3000 / to your deploy site that vercel shows you (if you are deploying in vercel);
+
+1,05
